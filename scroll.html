@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolling Text</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .scroller {
+      animation: scroll-left linear infinite;
+      animation-duration: 15s; /* Adjust for desired speed */
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%); /* Adjust based on content width and repetition */
+      }
+    }
+
+    .scroller.reverse {
+      animation-direction: reverse;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="overflow-hidden relative">
+      <div class="scroller whitespace-nowrap text-center font-sans text-4xl font-bold tracking-[-0.02em] drop-shadow md:text-[5rem] md:leading-[5rem]">
+        <span>Your Text Here&nbsp;</span>
+        <span>Your Text Here&nbsp;</span>
+        <span>Your Text Here&nbsp;</span>
+        <span>Your Text Here&nbsp;</span>
+        <span>Your Text Here&nbsp;</span>
+        <span>Your Text Here&nbsp;</span>
+      </div>
+    </div>
+    <div class="overflow-hidden relative mt-4">
+      <div class="scroller reverse whitespace-nowrap text-center font-sans text-4xl font-bold tracking-[-0.02em] drop-shadow md:text-[5rem] md:leading-[5rem]">
+        <span>Another Scrolling Text&nbsp;</span>
+        <span>Another Scrolling Text&nbsp;</span>
+        <span>Another Scrolling Text&nbsp;</span>
+        <span>Another Scrolling Text&nbsp;</span>
+        <span>Another Scrolling Text&nbsp;</span>
+        <span>Another Scrolling Text&nbsp;</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
