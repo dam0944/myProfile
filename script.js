@@ -474,7 +474,6 @@ function initScrollToTop() {
         font-size: 1.5rem;
         cursor: pointer;
         opacity: 0;
-        visibility: hidden;
         transition: all 0.3s ease;
         z-index: 1000;
         box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
@@ -491,7 +490,6 @@ function initScrollToTop() {
         scrollBtn.style.visibility = "visible"
       } else {
         scrollBtn.style.opacity = "0"
-        scrollBtn.style.visibility = "hidden"
       }
     }, 100),
   )
