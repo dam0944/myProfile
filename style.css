@@ -1021,7 +1021,6 @@ section {
 .projects {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   position: relative;
-  overflow: hidden;
 }
 
 .projects::before {
@@ -1075,7 +1074,6 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
-  opacity: 0;
   transform: translateY(50px) scale(0.95);
   animation: projectReveal 0.8s ease forwards;
 }
@@ -1445,7 +1443,7 @@ section {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 300px) {
   .projects-grid {
     gap: 1.5rem;
   }
@@ -1486,39 +1484,12 @@ section {
 
 /* Scroll-triggered animations */
 .project-card.animate-on-scroll {
-  opacity: 0;
   transform: translateY(50px) scale(0.95);
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .project-card.animate-on-scroll.visible {
-  opacity: 1;
   transform: translateY(0) scale(1);
-}
-
-/* Staggered animation delays for scroll-triggered animations */
-.project-card.animate-on-scroll:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.project-card.animate-on-scroll:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.project-card.animate-on-scroll:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.project-card.animate-on-scroll:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-.project-card.animate-on-scroll:nth-child(5) {
-  transition-delay: 0.5s;
-}
-
-.project-card.animate-on-scroll:nth-child(6) {
-  transition-delay: 0.6s;
 }
 
 /* Enhanced hover effects */
@@ -1538,15 +1509,6 @@ section {
   }
 }
 
-/* Floating animation for project cards */
-.project-card {
-  animation: float 6s ease-in-out infinite;
-}
-
-.project-card:nth-child(even) {
-  animation-delay: -3s;
-}
-
 @keyframes float {
   0%,
   100% {
@@ -1557,9 +1519,6 @@ section {
   }
 }
 
-.project-card:hover {
-  animation: none;
-}
 
 /* Contact Section */
 .contact {
@@ -2002,17 +1961,7 @@ section {
   outline-offset: 2px;
 }
 
-/* Enhanced project card animations */
-.project-card {
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.6s ease;
-}
 
-.project-card.visible {
-  transform: translateY(0);
-  opacity: 1;
-}
 
 /* Staggered animation delays for skill cards */
 .skill-card:nth-child(1) {
@@ -2076,9 +2025,4 @@ section {
   50% {
     box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);
   }
-}
-
-.project-card:hover .project-status {
-  background: linear-gradient(135deg, #d97706, #b45309) !important;
-  transform: scale(1.05);
 }
